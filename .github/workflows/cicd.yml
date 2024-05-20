@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-name: PUSH TO STAGING
-=======
 name: main push
->>>>>>> c50894377a79678ed369c2a4841d86a7cb30c6a9
+
 
 on:
   push:
