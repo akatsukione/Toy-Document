@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: build docker image
+        
       - name: SSH and deploy Toy
 
         uses: appleboy/ssh-action@v1.0.3
@@ -26,10 +28,11 @@ jobs:
           password: ${{ secrets.STG_SSH_PASSWORD }}
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
-          script: whoami
+          script: |
 
             cd ./toy-document
+            # echo "this is " > hello.txt
             # git pull origin main
-            echo 'hello' > hello.txt
+            # docker run hello-documentdocumentworld
             # docker-compose -f docker-compose.yml up --build -d
 
