@@ -18,15 +18,18 @@ jobs:
 
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.STG_SSH_HOST }}
-          username: ${{ secrets.STG_SSH_USERNAME }}
-          password: ${{ secrets.STG_SSH_PASSWORD }}
+          host: 95.216.126.102
+          username: kaiser
+          password: 1qazxsW@#Edc
+          # host: ${{ secrets.STG_SSH_HOST }}
+          # username: ${{ secrets.STG_SSH_USERNAME }}
+          # password: ${{ secrets.STG_SSH_PASSWORD }}
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
           script: |
 
             cd /toy-document
-            git pull origin main
+            # git pull origin main
             echo 'hello'
             # docker-compose -f docker-compose.yml up --build -d
 
