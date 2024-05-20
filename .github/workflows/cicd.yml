@@ -18,12 +18,12 @@ jobs:
 
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 95.216.126.102
-          username: kaiser
-          password: 1qazxsW@#Edc
-          # host: ${{ secrets.STG_SSH_HOST }}
-          # username: ${{ secrets.STG_SSH_USERNAME }}
-          # password: ${{ secrets.STG_SSH_PASSWORD }}
+          # host: 95.216.126.102
+          # username: kaiser
+          # password: 1qazxsW@#Edc
+          host: ${{ secrets.STG_SSH_HOST }}
+          username: ${{ secrets.STG_SSH_USERNAME }}
+          password: ${{ secrets.STG_SSH_PASSWORD }}
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
           script: whoami
