@@ -22,7 +22,7 @@ jobs:
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
           script: |
-            cd ~/daniconfigs-api
-            # git pull origin staging
+            cd /toy-document
+            git pull origin staging
             # echo '${{ secrets.STG_ENV_CONFIG_JSON }}' > .env
             # docker-compose -f docker-compose.yml up --build -d
