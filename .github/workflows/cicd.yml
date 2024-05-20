@@ -23,6 +23,6 @@ jobs:
           #port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/Toy-document
-            git pull origin main
+            # git pull origin main
             # echo '${{ secrets.STG_ENV_CONFIG_JSON }}' > .env.production.local
             # docker-compose -f docker-compose.prod.yml up --build -d
