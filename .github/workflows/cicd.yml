@@ -1,0 +1,28 @@
+name: PUSH TO STAGING
+
+on:
+  push:
+    branches:
+      - main
+  # lancement manuel action
+  workflow_dispatch:
+
+jobs: 
+  deploy:
+    #needs: [test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH and deploy Toy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.STG_SSH_HOST }}
+          username: ${{ secrets.STG_SSH_USERNAME }}
+          password: ${{ secrets.STG_SSH_PASSWORD }}
+          #key: ${{ secrets.SSH_KEY }}
+          #port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd ~/Toy-document
+            git pull origin main
+            # echo '${{ secrets.STG_ENV_CONFIG_JSON }}' > .env.production.local
+            # docker-compose -f docker-compose.prod.yml up --build -d
