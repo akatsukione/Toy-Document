@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: SSH and deploy Toy
 
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: 95.216.126.102
           username: kaiser
@@ -30,6 +30,6 @@ jobs:
 
             cd /toy-document
             # git pull origin main
-            echo 'hello'
+            # echo 'hello'
             # docker-compose -f docker-compose.yml up --build -d
 
