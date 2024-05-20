@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: PUSH TO STAGING
+=======
+name: main push
+>>>>>>> c50894377a79678ed369c2a4841d86a7cb30c6a9
 
 on:
   push:
@@ -14,6 +18,7 @@ jobs:
 
     steps:
       - name: SSH and deploy Toy
+
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.STG_SSH_HOST }}
@@ -22,7 +27,9 @@ jobs:
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
           script: |
-            cd ~/Toy-document
-            # git pull origin main
-            # echo '${{ secrets.STG_ENV_CONFIG_JSON }}' > .env.production.local
-            # docker-compose -f docker-compose.prod.yml up --build -d
+
+            cd /toy-document
+            git pull origin main
+            echo 'hello'
+            # docker-compose -f docker-compose.yml up --build -d
+
