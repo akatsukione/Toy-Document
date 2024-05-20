@@ -28,7 +28,7 @@ jobs:
           #port: ${{ secrets.SSH_PORT }}
           script: whoami
 
-            # cd /toy-document
+            cd ./toy-document
             # git pull origin main
             # echo 'hello'
             # docker-compose -f docker-compose.yml up --build -d
