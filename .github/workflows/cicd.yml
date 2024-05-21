@@ -30,8 +30,9 @@ jobs:
           #port: ${{ secrets.SSH_PORT }}
           script: |
 
-            cd ./toy-document
-            git clone https://github.com/akatsukione/Toy-Document.git
+            cd ./toy-document/Toy-Document
+            git pull
+            npm install
             # git reset --hard HEAD
             # git pull
             # git pull origin main
