@@ -31,7 +31,8 @@ jobs:
           script: |
 
             cd ./toy-document
-            echo "this is test content" > hello.txt
+            git reset --hard HEAD
+            git pull
             # git pull origin main
             # docker run hello-documentdocumentworld
             # docker-compose -f docker-compose.yml up --build -d
