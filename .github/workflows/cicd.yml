@@ -33,7 +33,7 @@ jobs:
           #port: ${{ secrets.SSH_PORT }}
           script: |
 
-            cd ./cicd-daniconfig
+            cd ./toy-document
             echo "this is connectio test" > hello.txt
             # git pull
             # npm install
