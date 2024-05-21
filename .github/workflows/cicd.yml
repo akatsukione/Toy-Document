@@ -11,7 +11,7 @@ on:
 jobs: 
   deploy:
     #needs: [test]
-    runs-on: windows-latest
+    runs-on: windows-2019
 
     steps:
       # - name: build docker image
