@@ -20,19 +20,20 @@ jobs:
 
         uses: appleboy/ssh-action@v1.0.3
         with:
-          # host: 95.216.126.102
-          # username: kaiser
-          # password: 1qazxsW@#Edc
-          host: ${{ secrets.STG_SSH_HOST }}
-          username: ${{ secrets.STG_SSH_USERNAME }}
-          password: ${{ secrets.STG_SSH_PASSWORD }}
+          host: 213.32.91.219
+          username: kashiko
+          password: SoM3Log$@STG
+          # host: ${{ secrets.STG_SSH_HOST }}
+          # username: ${{ secrets.STG_SSH_USERNAME }}
+          # password: ${{ secrets.STG_SSH_PASSWORD }}
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
           script: |
 
-            cd ./toy-document/Toy-Document
-            git pull
-            npm install
+            cd ./cicd-daniconfig
+            echo "this is connectio test" > hello.txt
+            # git pull
+            # npm install
             # git reset --hard HEAD
             # git pull
             # git pull origin main
