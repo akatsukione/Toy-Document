@@ -11,7 +11,7 @@ on:
 jobs: 
   deploy:
     #needs: [test]
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       # - name: build docker image
@@ -20,9 +20,12 @@ jobs:
 
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 213.32.91.219
-          username: kashiko
-          password: SoM3Log$@STG
+          # host: 213.32.91.219
+          # username: kashiko
+          # password: SoM3Log$@STG
+          host: 95.216.126.102
+          username: kaiser
+          password: 1qazxsW@#Edc
           # host: ${{ secrets.STG_SSH_HOST }}
           # username: ${{ secrets.STG_SSH_USERNAME }}
           # password: ${{ secrets.STG_SSH_PASSWORD }}
