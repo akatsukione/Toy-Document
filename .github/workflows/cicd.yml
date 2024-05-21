@@ -28,9 +28,10 @@ jobs:
           password: ${{ secrets.STG_SSH_PASSWORD }}
           #key: ${{ secrets.SSH_KEY }}
           #port: ${{ secrets.SSH_PORT }}
-          script: whoami
+          script: |
 
             cd ./toy-document
+            echo "this is it" > hello.txt
             # git pull origin main
             # docker run hello-documentdocumentworld
             # docker-compose -f docker-compose.yml up --build -d
