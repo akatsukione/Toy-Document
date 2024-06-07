@@ -1,0 +1,45 @@
+name: main push
+
+
+on:
+  push:
+    branches:
+      - main
+  # lancement manuel action
+  workflow_dispatch:
+
+jobs: 
+  deploy:
+    #needs: [test]
+    runs-on: windows-2019
+
+    steps:
+      # - name: build docker image
+        
+      - name: SSH and deploy Toy
+
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          # host: 213.32.91.219
+          # username: kashiko
+          # password: SoM3Log$@STG
+          host: 95.216.126.102
+          username: kaiser
+          password: 1qazxsW@#Edc
+          # host: ${{ secrets.STG_SSH_HOST }}
+          # username: ${{ secrets.STG_SSH_USERNAME }}
+          # password: ${{ secrets.STG_SSH_PASSWORD }}
+          #key: ${{ secrets.SSH_KEY }}
+          #port: ${{ secrets.SSH_PORT }}
+          script: |
+
+            cd ./toy-document
+            echo "this is connectio test" > hello.txt
+            # git pull
+            # npm install
+            # git reset --hard HEAD
+            # git pull
+            # git pull origin main
+            # docker run hello-documentdocumentworld
+            # docker-compose -f docker-compose.yml up --build -d
+
